@@ -29,16 +29,20 @@ window.onload = function () {
 
 
 	//Автоматическое добавление data-size
-/* 	$(".zooming a").attr("data-size", function (index, value) {
-		let next = $(this).children();
-		if (value) {
-			return;
+
+	let zooming = document.querySelectorAll('.zooming a');
+	for (let k = 0; k < zooming.length; k++) {
+		let children = zooming[k].firstElementChild;
+		let data = zooming[k].dataset.size;
+		if (data) {
+			continue;
 		} else {
-			let imageNaturalWidth = next.prop('naturalWidth');
-			let imageNaturalHeight = next.prop('naturalHeight');
-			return imageNaturalWidth + "x" + imageNaturalHeight;
+			let imageNaturalWidth = children.naturalWidth;
+			let imageNaturalHeight = children.naturalHeight;
+			zooming[k].dataset.size = `${imageNaturalWidth}x${imageNaturalHeight}`;
 		}
-	}); */
+	}
+
 	//Автоматическое добавление data-size end
 
 
@@ -185,15 +189,14 @@ window.onload = function () {
 				num + '.png';
 			return img;
 		}
-	/* 	createTipField() {
-			let img = document.createElement('div');
-			img.className = 'tip-img tip-img-' + num;
-			img.src = 'tips/' + num + '.png';
-			return img;
-		} */
+		/* 	createTipField() {
+				let img = document.createElement('div');
+				img.className = 'tip-img tip-img-' + num;
+				img.src = 'tips/' + num + '.png';
+				return img;
+			} */
 		getCoords(elem) {
-			let
-				box = elem.getBoundingClientRect();
+			let box = elem.getBoundingClientRect();
 			return {
 				top: box.top + pageYOffset,
 				left: box.left + pageXOffset,
