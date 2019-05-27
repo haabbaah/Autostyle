@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8">
+	<title>Title</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link rel="stylesheet" href="../shares/style.css">
+
+	<style>
+
+		@font-face {
+			font-family: txt_no_serif;
+			src: url(fonts/S-Core-CoreSansN47CnRegular.otf);
+		}
+
+		@font-face {
+			font-family: txt_no_serif_b;
+			src: url(fonts/S-Core-CoreSansN67CnBold.otf);
+		}
+
+
+
+
+		.img-responsive {
+			display: block;
+			max-width: 100%;
+			height: auto;
+		}
+
+		.display-none {
+			display: none;
+		}
+
+		/* стили для адреса */
+
+		.adress-end {
+			margin: 0 auto;
+			margin-top: 50px;
+			max-width: 100%;
+		}
+
+		.adress-end .wrap-bd {
+			background-color: #818285;
+			-webkit-clip-path: polygon(50px 0%, 100% 0%, 100% -webkit-calc(100% - 50px), -webkit-calc(100% - 50px) 100%, 0% 100%, 0% 50px);
+			clip-path: polygon(50px 0%, 100% 0%, 100% calc(100% - 50px), calc(100% - 50px) 100%, 0% 100%, 0% 50px);
+			padding-right: .5%;
+			padding-left: 5%;
+			padding-bottom: 2%;
+		}
+
+		.adress-end .wrap-bd .middle-bd {
+			background-color: #A6AEB4;
+			-webkit-clip-path: polygon(50px 0%, 100% 0%, 100% -webkit-calc(100% - 50px), -webkit-calc(100% - 50px) 100%, 0% 100%, 0% 50px);
+			clip-path: polygon(50px 0%, 100% 0%, 100% calc(100% - 50px), calc(100% - 50px) 100%, 0% 100%, 0% 50px);
+			padding: 3%;
+		}
+
+		.adress-end .wrap-bd .middle-bd .inner-bd {
+			background-color: #fff;
+			-webkit-clip-path: polygon(40px 0%, 100% 0%, 100% -webkit-calc(100% - 40px), -webkit-calc(100% - 40px) 100%, 0% 100%, 0% 40px);
+			clip-path: polygon(40px 0%, 100% 0%, 100% calc(100% - 40px), calc(100% - 40px) 100%, 0% 100%, 0% 40px);
+			padding: 7%;
+		}
+
+		.adress-end .wrap-bd .middle-bd .inner-bd h2 {
+			text-transform: uppercase;
+			font-family: txt_no_serif_b;
+			font-size: 1.5em;
+			margin-bottom: 0;
+		}
+
+		.adress-end .wrap-bd .middle-bd .inner-bd div {
+			font-family: txt_no_serif;
+			font-size: 1.5em;
+			line-height: 1.1;
+		}
+
+		.adress-end .wrap-bd .middle-bd .inner-bd a {
+			color: #000;
+			text-decoration: none;
+		}
+
+		.adress-end .wrap-bd .middle-bd .inner-bd .adress-site {
+			position: relative;
+		}
+
+
+
+		.test{
+			width: 80%;
+			margin: 3rem 10%;
+		}
+
+		.test span{
+			font-weight: bold;
+		}
+
+
+		@media only screen and (max-width: 480px) {
+			.adress-end {
+				max-width: 100%;
+			}
+
+			.grid {
+				margin: 0 2%;
+			}
+		}
+
+		/* стили для адреса end*/
+	</style>
+</head>
+
+<body>
+
+
+
+	<section>
+		<div class="grid">
+			<div class="adress-end">
+
+				<div class="wrap-bd">
+					<div class="middle-bd">
+						<div class="inner-bd">
+							<h2>Где купить?</h2>
+							<div class="adress-title">Европа авто</div>
+							<div class="adress-sity">г. Екатеринбург, пр. Космонавтов, 6;</div>
+							<div class="adress-tel">тел.: +7 (343) 373-72-72</div>
+							<div class="adress-site">
+								<a class="tip-1" href="http://www.europa-avto.ru/">europa-avto.ru</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="tip-btn tip-btn__right">
+				<img src="interactive.gif" alt="">
+			</div>
+		</div>
+	</section>
+
+
+
+
+	<div class="test">
+		<p>
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis atque reprehenderit aliquam pariatur, inventore
+			illum
+			quam animi quisquam, quasi sit id laboriosam odio dolor repellendus ab dolore, <span class="tip-1">enim sequi
+				voluptate?</span>
+		</p>
+	</div>
+
+
+
+	<script src="../shares/script.js"></script>
+
+</body>
+
+</html>

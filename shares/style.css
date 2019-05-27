@@ -1,0 +1,407 @@
+@import url('plugins/slick/slick.css');
+@import url('plugins/slick/slick-theme.css');
+@import url('plugins/PhotoSwipe/photoswipe.css');
+@import url('plugins/PhotoSwipe/default-skin/default-skin.css');
+
+
+
+/*reset*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+blockquote,
+q {
+	quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/** Custom styles for gallery sliding*/
+
+
+
+.sliding_gallery figure,
+.zooming figure {
+	margin: 0;
+}
+
+
+/* .zooming{
+	margin: 2em 0;
+}
+
+.zooming+figcaption {
+	margin-top: -2em;
+}
+ */
+/** Custom styles for zooming*/
+
+.pswp__top-bar {
+	padding-top: 70px;
+	height: auto;
+}
+
+.pswp__counter {
+	top: 70px;
+}
+
+.zooming figcaption {
+	display: none;
+}
+
+.pswp__caption__center {
+	font-family: txt_serif_i;
+	max-width: 100%;
+	font-size: 100%;
+	line-height: 1.3em;
+	text-indent: 0;
+	text-align: left;
+	-webkit-hyphens: none;
+	-ms-hyphens: none;
+	-moz-hyphens: none;
+	hyphens: none;
+	margin: 1em 2% 1em 2%;
+}
+
+.pswp__caption__center small {
+	font-size: 60%;
+}
+
+figcaption,
+.caption_padding,
+table,
+.dossier {
+	font-family: txt_serif_i;
+	font-size: 100%;
+	line-height: 1.3em;
+	text-indent: 0;
+	text-align: left;
+	-webkit-hyphens: none;
+	-ms-hyphens: none;
+	-moz-hyphens: none;
+	hyphens: none;
+	padding: 0.5em 0em;
+	position: relative;
+	z-index: 100;
+	margin: 0 0 2em;
+}
+
+.caption_padding {
+	margin: 0;
+}
+
+
+
+* {
+	box-sizing: border-box;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Шрифты */
+
+@font-face {
+	font-family: 'TextBook';
+	src: url("fonts/TextBook.eot?iefix") format("eot");
+	src: url("fonts/TextBook.ttf") format("truetype");
+	font-weight: 400;
+	font-style: normal;
+}
+
+/* Шрифты end */
+
+
+/* Общие стили */
+body {
+	margin: 0 0 3em;
+	font-size: 14pt;
+	line-height: 1.3em;
+}
+
+.grid {
+	margin: 0 10%;
+}
+
+.grid>p {
+	text-indent: 1em;
+	font-family: TextBook;
+}
+
+img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+.center {
+	text-align: center;
+}
+
+.noindent {
+	text-indent: 0 !important;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.nohyphens {
+	-webkit-hyphens: none;
+	-ms-hyphens: none;
+	-moz-hyphens: none;
+	hyphens: none;
+}
+
+
+.tab {
+	width: 50%;
+	margin: 0 auto;
+}
+
+
+.obj {
+	object-fit: cover;
+	object-position: 50% 50%;
+	width: 100%;
+	height: 50vw;
+}
+
+.square {
+	height: 80vw;
+}
+
+
+
+/* Общие стили end */
+
+
+
+/* Кнопки подсказки  */
+
+.tip-img {
+	position: absolute;
+	transform: translate(-54%, -86%);
+	pointer-events: none;
+}
+
+.tip-btn{
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.tip-btn__right {
+	justify-content: flex-end;
+}
+
+
+.tip-img-1 {
+	width: 5.5vw;
+}
+
+.tip-img-2 {
+	width: 6vw;
+}
+
+.tip-img-3 {
+	width: 6vw;
+}
+
+.tip-img-4 {
+	width: 6vw;
+}
+
+.tip-img-5 {
+	width: 24vw;
+}
+
+.tip-btn img {
+	width: 10vw;
+}
+
+
+/* Кнопки подсказки end */
+
+
+@media (max-device-width: 11cm) {
+	.grid {
+		margin: 0 2%;
+	}
+
+	.tab {
+		width: 100%;
+	}
+
+	.obj {
+		height: 60vw;
+	}
+
+	.square {
+		height: 93vw;
+	}
+
+	.tip-img-1 {
+		width: 8vw;
+	}
+
+	.tip-img-2 {
+		width: 6vw;
+	}
+
+	.tip-img-3 {
+		width: 6vw;
+	}
+
+	.tip-img-4 {
+		width: 6vw;
+	}
+
+	.tip-img-5 {
+		width: 24vw;
+	}
+
+	.tip-btn img {
+		width: 15vw;
+	}
+}

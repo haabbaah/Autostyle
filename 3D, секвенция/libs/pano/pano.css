@@ -1,0 +1,130 @@
+.haab-panorama {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+.haab-panorama * {
+	margin: 0;
+	padding: 0;
+}
+
+.haab-panorama .pano-container {
+	position: absolute;
+	width: 1024px;
+	height: 1024px;
+	transform-origin: 0 0;
+	-webkit-transform-origin: 0 0;
+	perspective: 512px;
+	-webkit-perspective: 512px;
+	overflow: hidden;
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+}
+
+.haab-panorama .pano-cam {
+	position: absolute;
+	background-color: transparent;
+	width: 1024px;
+	height: 1024px;
+	transform: translateZ(512px);
+	-webkit-transform: translateZ(512px);
+	transform-style: preserve-3d;
+	-webkit-transform-style: preserve-3d;
+}
+
+.haab-panorama .pano-scene {
+	position: absolute;
+	background-color: transparent;
+	width: 1024px;
+	height: 1024px;
+	transform-style: preserve-3d;
+	-webkit-transform-style: preserve-3d;
+}
+
+.haab-panorama .pano-side {
+	position: absolute;
+	background-color: transparent;
+	width: 1024px;
+	height: 1024px;	
+}
+
+.haab-panorama .pano-side>img {
+	width: 100%;
+	height: 100%;
+}
+
+.haab-panorama .pano-side-front {
+	transform: translateZ(-511px);
+	-webkit-transform: translateZ(-511px);
+}
+
+.haab-panorama .pano-side-back {
+	transform: rotateY(180deg) translateZ(-511px);
+	-webkit-transform: rotateY(180deg) translateZ(-511px);
+}
+
+.haab-panorama .pano-side-left {
+	transform: rotateY(90deg) translateZ(-511px);
+	-webkit-transform: rotateY(90deg) translateZ(-511px);
+}
+
+.haab-panorama .pano-side-right {
+	transform: rotateY(-90deg) translateZ(-511px);
+	-webkit-transform: rotateY(-90deg) translateZ(-511px);
+}
+
+.haab-panorama .pano-side-top {
+	transform: rotateX(-90deg) translateZ(-511px) rotateZ(90deg);
+	-webkit-transform: rotateX(-90deg) translateZ(-511px) rotateZ(90deg);
+}
+
+.haab-panorama .pano-side-bottom {
+	transform: rotateX(90deg) translateZ(-511px) rotateZ(-90deg);
+	-webkit-transform: rotateX(90deg) translateZ(-511px) rotateZ(-90deg);
+}
+
+.haab-panorama .pano-popup {
+	position: absolute;
+	z-index: 2;
+
+	transition-property: opacity, visibility;
+	transition-duration: 500ms;
+	opacity: 0;
+	visibility: hidden;
+}
+
+.haab-panorama .pano-button {
+	position: absolute;
+	width: 2cm;
+	height: 2cm;
+	z-index: 1;
+}
+
+@keyframes pano-button-anim {
+	from {
+		transform: scale(0.9);
+	}
+	to {
+		transform: scale(1.1);
+	}
+}
+
+.haab-panorama .pano-button>img {
+	width: 100%;
+	height: 100%;
+	animation-name: pano-button-anim;
+	animation-duration: 500ms;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-timing-function: linear;
+}
+
+.haab-panorama .visible {
+	opacity: 1;
+	visibility: visible;
+}
